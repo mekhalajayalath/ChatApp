@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Group Chat</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/Chat/assets/css/chatDeco.css">
+
+        <script src="/Chat/assets/js/angular.js"></script>
+        <script src="/Chat/assets/js/angular-route.js"></script>
+        <script src="/Chat/assets/js/ng-tags-input.js"></script>
+        <script src="/Chat/assets/js/requirejs.js"></script>
+
+        <script src="/Chat/assets/js/app.js"></script>
+
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    </head>
+    <body ng-app="chatApp"  ng-controller="chatController" data-ng-init="init()" >
+            <div >   
+                <input type="hidden" ng-model="userName" ng-value="userName" id="userName" />             
+                <div ng-repeat="message in messages">
+                    <div ng-switch on="message.chatOwner">
+                        <div ng-switch-when="Mekhala">
+                            <div align="left" class="chatShade">
+                                <div class="chatOwner">{{message.chatOwner}}</div>
+                                <div class="chatBody">{{message.chatMsg}}</div>  
+                            </div>
+                        </div>
+                        <div ng-switch-default>
+                            <div align="right" class="chatShade">
+                                <div class="chatOwner">{{message.chatOwner}}</div>
+                                <div class="chatBody">{{message.chatMsg}}</div>  
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <br>
+                    <textarea class="chatDlg" id="txtArea" ng-keypress="keyPress($event.keyCode)" ng-model="chatMsg"></textarea>
+                </div>
+        </div>
+    </body>
+</html>
+
+
+
+

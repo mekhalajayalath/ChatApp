@@ -1,0 +1,44 @@
+<!--<!DOCTYPE html>
+
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+
+<html>
+    <head>
+        <title>Group Chat</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="/chat/JS/libs/angular.js"></script>
+        <script src="/chat/JS/libs/angular-route.js"></script>
+        <script src="/chat/JS/libs/ng-tags-input.js"></script>
+        <script src="/chat/JS/app.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    </head>
+    <body ng-app="chatApp">
+        <div>
+            <button type="button">Click Me!</button>
+        </div>
+        <div ng-controller="chatController"> 
+            <div ng-repeat="message in messages">
+                <p>{{message.messageBody}}</p>
+            </div>
+            <div>
+                <textarea id="txtArea" ng-keypress="keyPress($event.keyCode)" ng-model="chatMsg"></textarea>
+            </div>
+        </div>
+    </body>
+</html>
+
+ <body ng-app="chatApp">
+        <div ng-controller="nameController">
+            <form name = "userNameForm">
+                <input type="text" name ="Name" ng-model="Name" />
+                <button ng-click="getName()" type = "submit" > submit </button> 
+            </form>
+        </div>
+    </body>
+
+
+-->
